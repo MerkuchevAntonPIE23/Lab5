@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        // Ввод матрицы
+        let strings = Number(prompt("Введите кол-во строк"));
+        let columns = Number(prompt("Введите кол-во столбцов"));
+        let matrix = []
+        let changeableStrings = strings
+        while (changeableStrings > 0) {
+            let string = []
+            let changeableColumns = columns
+            while (changeableColumns > 0) {
+                string.push(Number(prompt()));
+                changeableColumns--
+            }
+            matrix.push(string);
+            changeableStrings--
+        }
+        // Вывод матрицы
+        let matrixToShow = matrix.join('\n')
+        alert (matrixToShow)
+        // Вывод K-й строки
+        let stringToShow = Number(prompt('какую строку вывести?'))
+        alert (matrix[stringToShow-1])
+    </script>
+</body>
+</html>
